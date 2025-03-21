@@ -1,7 +1,21 @@
 class Account {
-    void accountBalance() {
-        System.out.println("Account Balance");
+    private double balance = 100.00;
+
+    double getBalance() {
+        return balance;
     }
+   void deposit(double amount) {
+        balance = balance + amount; // balance +=amount
+   }
+
+
+   boolean withdraw(double amount) {
+        if (balance >= amount) {
+            balance = balance - amount;
+            return true;
+        }
+        return false;
+   }
 }
 
 
