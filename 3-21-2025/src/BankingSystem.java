@@ -19,15 +19,13 @@ class Account {
 }
 
 
-class Security {
-    void verifyUser(){
-        System.out.println("Security Verify");
+class TransactionLogger {
+    void logTransaction(String message) {
+        System.out.println("Transaction Log:" + message);
     }
 }
 
-class TransactionLogger {
-    void logTransaction(Account account, Security security) {}
-}
+
 
 
 
