@@ -19,5 +19,38 @@ class StreamingService{
 }
 
 
+class MultimediaFacade{
+    private AudioPlayer audio;
+    private VideoPlayer video;
+    private StreamingService streaming;
+
+    public MultimediaFacade(){
+        this.audio = new AudioPlayer();
+        this.video = new VideoPlayer();
+        this.streaming = new StreamingService();
+
+    }
+
+    void playSound(){
+        audio.playAudio();
+    }
+
+    void playVideo(){
+        video.playVideo();
+    }
+    void streamStart(){
+        streaming.startStreaming();
+
+    }
+}
+
+
 public class FacadeExample {
+    public static void main(String[] args) {
+        MultimediaFacade multimedia = new MultimediaFacade();
+
+        multimedia.playVideo();
+        multimedia.playSound();
+        multimedia.streamStart();
+    }
 }
